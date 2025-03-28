@@ -1,0 +1,55 @@
+{
+  "name": "rust-auto-braces",
+  "displayName": "Rust Auto Braces",
+  "description": "Automatically adds curly braces for Rust code blocks on Enter.",
+  "version": "0.0.2",
+  "publisher": "7dev",
+  "icon": "logo.png",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Formatters"
+  ],
+  "activationEvents": [
+    "onLanguage:rust"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "rustAutoBraces.onEnter",
+        "title": "Insert braces on Enter in Rust"
+      }
+    ],
+    "keybindings": [
+  {
+    "command": "rustAutoBraces.onEnter",
+    "key": "enter",
+    "when": "editorTextFocus && editorLangId == 'rust' && !suggestWidgetVisible && !suggestWidgetHasFocusedSuggestion && !editorHasSelection && !editorHasMultipleSelections && !inlineSuggestVisible"
+  }
+],
+    "configuration": {
+      "title": "Rust Auto Braces",
+      "properties": {
+        "rustAutoBraces.braceStyle": {
+          "type": "string",
+          "enum": ["sameLine", "nextLine"],
+          "default": "nextLine",
+          "description": "Determines whether opening braces are placed on the same line or the next line"
+        },
+        "rustAutoBraces.addEmptyLine": {
+          "type": "boolean",
+          "default": false,
+          "description": "Add an extra empty line before the closing brace"
+        },
+        "rustAutoBraces.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable or disable the extension"
+        }
+      }
+    }
+  }
+}
