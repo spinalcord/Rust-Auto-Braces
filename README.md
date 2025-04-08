@@ -105,7 +105,10 @@ Please report any unexpected behavior or bugs on the project's issue tracker.
 
 ## Release Notes
 
-### 1.0.0
+### 0.0.3
+add `mod` support
+
+### 0.0.2
 
 * Improved error handling with graceful fallback to normal Enter behavior
 * Added robust comment handling to prevent false triggers
@@ -117,7 +120,7 @@ Please report any unexpected behavior or bugs on the project's issue tracker.
 * Better handling of undo/redo behavior
 * Performance improvements and code organization
 
-### 0.1.0
+### 0.0.1
 
 * Initial release of `rust-auto-braces`.
 * Features:

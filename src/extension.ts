@@ -70,7 +70,7 @@ async function handleEnterKey(editor: vscode.TextEditor): Promise<void> {
         // More comprehensive regex that should cover most cases.
         // Allows modifiers like pub, async, unsafe at the beginning.
         // Looks for keywords followed by something (but not { or ; at the end).
-        const braceTriggerRegex = /^\s*(pub(\s*\([^)]+\))?\s*)?(async\s+)?(unsafe\s+)?(fn|struct|enum|impl|trait|match|loop|if|while|for)\b(?!.*[{;]$).*$/;
+        const braceTriggerRegex = /^\s*(pub(\s*\([^)]+\))?\s*)?(async\s+)?(unsafe\s+)?(fn|struct|enum|impl|trait|match|loop|if|while|for|mod)\b(?!.*[{;]$).*$/;
 
         // Special case: 'else' or 'else if'
         const elseTriggerRegex = /^\s*\}?\s*else(\s+if\b.*)?\s*$/;

@@ -2,9 +2,10 @@
   "name": "rust-auto-braces",
   "displayName": "Rust Auto Braces",
   "description": "Automatically adds curly braces for Rust code blocks on Enter.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "7dev",
   "icon": "logo.png",
+  "repository": "https://github.com/spinalcord/Rust-Auto-Braces",
   "engines": {
     "vscode": "^1.60.0"
   },
